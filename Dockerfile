@@ -5,5 +5,4 @@ COPY . .
 RUN pnpm install --no-frozen-lockfile
 RUN cd artifacts/blackpanda && npx vite build
 RUN npm install -g serve
-EXPOSE 3000
-CMD ["serve", "artifacts/blackpanda/dist", "-p", "3000"]
+CMD ["sh", "-c", "serve artifacts/blackpanda/dist -p ${PORT:-3000}"]

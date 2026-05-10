@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve("./src"),
+      "@assets": path.resolve("../../attached_assets"),
     },
     dedupe: ["react", "react-dom"],
   },
