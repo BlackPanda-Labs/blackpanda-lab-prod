@@ -1,0 +1,8 @@
+﻿[build]
+builder = "nixpacks"
+installCommand = "pnpm install"
+buildCommand = "pnpm --filter @workspace/blackpanda run build"
+
+[deploy]
+startCommand = "npx serve artifacts/blackpanda/dist"
+restartPolicyType = "on_failure"
