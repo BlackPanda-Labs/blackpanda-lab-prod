@@ -1,13 +1,9 @@
 {
-  "name": "workspace",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "blackpanda-lab",
+  "version": "1.0.0",
   "scripts": {
-    "build": "pnpm --filter @workspace/blackpanda run build"
+    "build": "cd artifacts/blackpanda && npx vite build",
+    "start": "npx serve artifacts/blackpanda/dist"
   },
-  "private": true,
-  "devDependencies": {
-    "typescript": "~5.9.2",
-    "prettier": "^3.8.1"
-  }
+  "private": true
 }
