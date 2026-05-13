@@ -75,7 +75,7 @@ export default function Home() {
   const [b64, setB64] = useState("...");
   const [hex, setHex] = useState("...");
 
-  const handleEncode = () => {
+  const handleEncode = () => {S
     if (!payload) return;
     setB64(window.btoa(payload));
     setHex(payload.split('').map(c => c.charCodeAt(0).toString(16)).join(' '));
@@ -98,6 +98,64 @@ export default function Home() {
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+          }}
+          className="relative z-10 flex flex-col items-center max-w-4xl mx-auto"
+        >
+          {/* This closes the Hero motion.div properly */}
+        </motion.div>
+      </section>
+
+      {/* --- LIVE LABORATORY TOOL SECTION --- */}
+      <section className="py-24 px-6 max-w-4xl mx-auto relative z-10">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUpVariant}
+          className="bg-[#0a0a0a] border border-[#1a1a1a] border-t-4 border-primary p-8 rounded-lg shadow-2xl"
+        >
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUpVariant}
+          className="bg-[#0a0a0a] border border-[#1a1a1a] border-t-4 border-primary p-8 rounded-lg shadow-2xl"
+        >
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-white flex items-center">
+              <span className="text-primary mr-3">⚡</span> Live WAF Evasion Encoder
+            </h2>
+            <span className="text-[10px] font-mono text-primary animate-pulse tracking-widest">SYSTEM ONLINE</span>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <input 
+              type="text" 
+              value={payload}
+              onChange={(e) => setPayload(e.target.value)}
+              className="flex-1 bg-black border border-[#2a2a2a] p-4 rounded text-primary font-mono outline-none focus:border-primary transition-colors"
+              placeholder="Enter payload (e.g. <script>alert(1)</script>)"
+            />
+            <button 
+              onClick={handleEncode}
+              className="px-8 py-4 bg-primary text-black font-bold rounded hover:bg-white transition-colors duration-300 uppercase tracking-tighter"
+            >
+              Obfuscate
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 font-mono">
+            <div className="bg-black p-4 border border-[#1a1a1a] rounded">
+              <label className="text-[10px] text-[#555] block mb-2 uppercase tracking-widest">Base64 Output</label>
+              <div className="text-primary break-all">{b64}</div>
+            </div>
+            <div className="bg-black p-4 border border-[#1a1a1a] rounded">
+              <label className="text-[10px] text-[#555] block mb-2 uppercase tracking-widest">Hex Output</label>
+              <div className="text-primary break-all">{hex}</div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
           }}
           className="relative z-10 flex flex-col items-center max-w-4xl mx-auto"
         >
