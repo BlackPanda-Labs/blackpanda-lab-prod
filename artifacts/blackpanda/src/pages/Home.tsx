@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import SiteHeader from "@/components/SiteHeader";
 
-// @ts-ignore
-import logo from "@assets/Gemini_Generated_Image_donrjidonrjidonr_1777815229817.png";
 // @ts-ignore
 import banner from "@assets/Gemini_Generated_Image_ar2uixar2uixar2u_1777815252358.png";
 // @ts-ignore
@@ -82,9 +81,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#e0e0e0] font-sans selection:bg-primary selection:text-black">
-      <header className="w-full p-6 flex justify-center items-center">
-        <img src={logo} alt="BlackPanda Logo" className="h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(57,255,20,0.3)]" />
-      </header>
+      <SiteHeader />
 
       <section className="relative pt-12 pb-24 px-6 flex flex-col items-center justify-center text-center min-h-[70vh]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(57,255,20,0.05)_0%,rgba(5,5,5,1)_60%)] pointer-events-none" />
