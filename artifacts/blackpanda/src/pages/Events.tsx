@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
-
-// @ts-ignore
-import logo from "@assets/Gemini_Generated_Image_donrjidonrjidonr_1777815229817.png";
+import SiteHeader from "@/components/SiteHeader";
 
 const contributionAreas = [
   "Documentation improvements",
@@ -51,15 +49,7 @@ export default function Events() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#e0e0e0] font-sans selection:bg-primary selection:text-black">
-      <header className="w-full p-6 flex justify-center items-center">
-        <a href="/" aria-label="BlackPanda Labs home">
-          <img
-            src={logo}
-            alt="BlackPanda Logo"
-            className="h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(57,255,20,0.3)]"
-          />
-        </a>
-      </header>
+      <SiteHeader currentPath="/events" />
 
       <main>
         <section className="relative pt-12 pb-16 px-6 flex flex-col items-center justify-center text-center min-h-[42vh]">
