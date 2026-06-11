@@ -1,21 +1,43 @@
-# 🐼 BlackPanda Labs | Research & Development
-**Status:** [LIVE PORTAL](https://blackpanda-lab-prod-production.up.railway.app/) | **Scope:** Red Team Automation
+# BlackPanda Labs
 
-## 🛡️ Laboratory Mission
-BlackPanda Labs is a specialized technical initiative focused on developing high-performance offensive security utilities. We bridge the gap between traditional penetration testing and automated evasion infrastructure.
+An independent, student-led open-source cybersecurity education and secure-development community.
 
-## 🌐 Live Infrastructure
-Our core research portal is currently hosted and operational:
-👉 **[Launch BlackPanda Operations Center](https://blackpanda-lab-prod-production.up.railway.app/)**
+## About BlackPanda Labs
 
-## 🛠️ Active Tooling Suite
-- **[panda-encoder](https://github.com/BlackPanda-Labs/panda-encoder):** Professional-grade WAF bypass and multi-layer encoding utility.
-- **[panda-brand](https://github.com/BlackPanda-Labs/panda-brand):** Internal lab signature and identity automation.
+BlackPanda Labs is an independent, student-led open-source community for cybersecurity learners, developers and AI enthusiasts. The project focuses on collaborative technical education, secure development, authorized laboratory learning and beginner-friendly open-source contributions.
 
-## 📋 Attributes
-- **Lead Researcher:** Debojit Singh
-- **Organization Status:** Open Source / Active
-- **Platform:** Hosted on Railway Cloud
+## Live Website
 
----
-*Authorized Security Auditing Use Only. (c) 2026 BlackPanda Labs.*
+[Visit the official BlackPanda Labs website](https://blackpanda-labs.vercel.app/)
+
+## What We Are Building
+
+- Public learning platform
+- Open-source tooling
+- Beginner-friendly technical resources
+- Community build sprints
+- Documentation and accessibility improvements
+
+## Community Safety
+
+All work must remain within authorized environments, controlled laboratories and safe educational scope. Do not test third-party systems without explicit permission. Do not submit credentials, stolen data, private information or unsafe live-target instructions.
+
+## Getting Started
+
+This repository uses a pnpm workspace with the public website located in `artifacts/blackpanda`.
+
+```powershell
+pnpm install
+pnpm run build
+pnpm --dir artifacts/blackpanda run typecheck
+pnpm --dir artifacts/blackpanda run dev
+```
+
+## Community Links
+
+- Public website: [blackpanda-labs.vercel.app](https://blackpanda-labs.vercel.app/)
+- GitHub organization: [github.com/BlackPanda-Labs](https://github.com/BlackPanda-Labs)
+
+## Independence Notice
+
+BlackPanda Labs is an independent student-led open-source community and is not affiliated with similarly named third-party organizations.
